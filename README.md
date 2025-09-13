@@ -5,7 +5,7 @@ if you are using smartir climate addon in home assistant, with this conversor yo
 
 using :
 
-python3 python.exe btu.py 1740.json > 1740converted.json
+python.exe btu.py 1740.json > 1740converted.json
 
 remember for UFO-R11, your final json file must include in every command that sintax, (code it's every code)
 
