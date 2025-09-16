@@ -158,7 +158,9 @@ def process_commands(filename):
     for key, value in commands.items():
         if isinstance(value, str):
             padded_string = value + "=" * ((4 - len(value) % 4) % 4)
-            processed_commands[key] = encode_ir(padded_string)
+            ir_code = encode_ir(padded_string)
+            #processed_commands[key] = encode_ir(padded_string)
+            processed_commands[key] = f'{{"ir_code_to_send": "{ir_code}"}}'
         elif isinstance(value, dict):
             processed_commands[key] = process_commands_recursively(value)
         else:
